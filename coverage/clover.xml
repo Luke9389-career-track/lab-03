@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1568921570780" clover="3.2.0">
-  <project timestamp="1568921570780" name="All files">
+<coverage generated="1568939585434" clover="3.2.0">
+  <project timestamp="1568939585434" name="All files">
     <metrics statements="19" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="8" elements="29" coveredelements="25" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
     <file name="document-collection.js" path="/Users/lukedonahue/alchemy/career-track/lab-03/lib/document-collection.js">
       <metrics statements="19" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="8"/>
@@ -17,12 +17,12 @@
       <line num="22" count="2" type="stmt"/>
       <line num="23" count="2" type="stmt"/>
       <line num="25" count="2" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
       <line num="33" count="1" type="stmt"/>
       <line num="34" count="1" type="stmt"/>
-      <line num="35" count="1" type="stmt"/>
-      <line num="38" count="0" type="stmt"/>
-      <line num="46" count="1" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

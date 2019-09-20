@@ -13,16 +13,15 @@ const path = require('path');
 describe('Document Collection', () => {
   const folder = 'fake';
 
-  
   it('saves a file to a given path', () => {
     //arrange
     const obj = { name: 'Luke', fake: true };
-    
+
     const writeResponse = Promise.resolve(obj);
     writeFile.mockReturnValueOnce(writeResponse);
 
     const docCollect = new DocumentCollection(folder);
-    
+
     //act
     return docCollect.save(obj)
       .then(() => {
@@ -34,7 +33,7 @@ describe('Document Collection', () => {
   })
 
   it('reads a file from a given path and returns and object', () => {
-    const obj = { name: 'Luke', fake: true, id: 'lit'};
+    const obj = { name: 'Luke', fake: true, id: 'lit' };
 
     readPromise = Promise.resolve(JSON.stringify(obj));
     readFile.mockReturnValueOnce(readPromise);
@@ -54,8 +53,8 @@ describe('Document Collection', () => {
     const obj = { name: 'Luke', fake: true, id: 'lit' };
 
     readPromise = Promise.resolve(JSON.stringify(obj));
-    readFile.mockReturnValueOnce(readPromise); 
-    
+    readFile.mockReturnValueOnce(readPromise);
+
     readDirPromise = Promise.resolve(['lit.json']);
     readdir.mockReturnValueOnce(readDirPromise);
 
