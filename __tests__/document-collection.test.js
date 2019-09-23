@@ -8,7 +8,6 @@ jest.mock('../lib/files.js', () => ({
 const { readFile, writeFile, readdir } = require('../lib/files');
 
 const DocumentCollection = require('../lib/document-collection');
-const path = require('path');
 
 describe('Document Collection', () => {
   const folder = 'fake';
@@ -29,13 +28,13 @@ describe('Document Collection', () => {
         expect(writeCalls.length).toBe(1);
         expect(writeCalls[0][1]).toBe(JSON.stringify(obj));
         expect(obj.id).toEqual(expect.any(String));
-      })
-  })
+      });
+  });
 
   it('reads a file from a given path and returns and object', () => {
     const obj = { name: 'Luke', fake: true, id: 'lit' };
 
-    readPromise = Promise.resolve(JSON.stringify(obj));
+    const readPromise = Promise.resolve(JSON.stringify(obj));
     readFile.mockReturnValueOnce(readPromise);
 
     const docCollection = new DocumentCollection(folder);
@@ -52,10 +51,10 @@ describe('Document Collection', () => {
   it('gets all files from a given folder', () => {
     const obj = { name: 'Luke', fake: true, id: 'lit' };
 
-    readPromise = Promise.resolve(JSON.stringify(obj));
+    const readPromise = Promise.resolve(JSON.stringify(obj));
     readFile.mockReturnValueOnce(readPromise);
 
-    readDirPromise = Promise.resolve(['lit.json']);
+    const readDirPromise = Promise.resolve(['lit.json']);
     readdir.mockReturnValueOnce(readDirPromise);
 
     const docCollection = new DocumentCollection(folder);
